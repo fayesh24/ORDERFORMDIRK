@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Form</title>
+    <style>
+        /* CSS styling for the form */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #038585;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .form-container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #b5aa57;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+            color: #555;
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .form-group label,
+        .form-group input[type="checkbox"],
+        .form-group input[type="radio"] {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        .form-group input[type="checkbox"] + label,
+        .form-group input[type="radio"] + label {
+            display: inline;
+        }
+
+        .submit-button {
+            text-align: center;
+        }
+
+        .submit-button button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-button button[type="reset"] {
+            background-color: #f44336;
+            margin-left: 10px;
+        }
+
+        .submit-button button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Order Form</h1>
+    <div class="form-container">
+        <form id="order-form">
+            <div class="form-group">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Complete Address:</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact Number:</label>
+                <input type="text" id="contact" name="contact" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="text" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="directions">Description of how to get to the place:</label>
+                <textarea id="directions" name="directions" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="burger">Burger:</label><br>
+                <input type="checkbox" id="single-patty" name="burger" value="single-patty">
+                <label for="single-patty">Single Patty</label><br>
+                <input type="checkbox" id="double-patty" name="burger" value="double-patty">
+                <label for="double-patty">Double Patty</label><br>
+                <input type="checkbox" id="with-cheese" name="burger" value="with-cheese">
+                <label for="with-cheese">With Cheese</label><br>
+                <!-- Add more burger options here -->
+            </div>
+            <div class="form-group">
+                <label for="bun">Choice of Bun:</label>
+                <select id="bun" name="bun">
+                    <option value="white-bun">White Bun</option>
+                    <option value="wheat-bun">Wheat Bun</option>
+                    <option value="honey-oat">Honey Oat</option>
+                    <option value="sugar-free">Sugar-Free</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="burger-quantity">Burger Quantity:</label>
+                <input type="number" id="burger-quantity" name="burger-quantity" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="pasta">Pasta:</label>
+                <select id="pasta" name="pasta">
+                    <option value="carbonara">Carbonara</option>
+                    <option value="pesto">Pesto</option>
+                    <option value="spaghetti">Spaghetti</option>
+                    <!-- Add more pasta options here -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="pasta-quantity">Pasta Quantity:</label>
+                <input type="number" id="pasta-quantity" name="pasta-quantity" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="fries-size">Fries Size:</label><br>
+                <input type="radio" id="small" name="fries-size" value="small" required>
+                <label for="small">Small</label><br>
+                <input type="radio" id="medium" name="fries-size" value="medium">
+                <label for="medium">Medium</label><br>
+                <input type="radio" id="large" name="fries-size" value="large">
+                <label for="large">Large</label><br>
+            </div>
+            <div class="form-group">
+                <label for="fries-flavor">Fries Flavor:</label><br>
+                <input type="checkbox" id="bbq" name="fries-flavor" value="bbq">
+                <label for="bbq">BBQ</label><br>
+                <input type="checkbox" id="cheese" name="fries-flavor" value="cheese">
+                <label for="cheese">Cheese</label><br>
+                <input type="checkbox" id="sour-cream" name="fries-flavor" value="sour-cream">
+                <label for="sour-cream">Sour Cream</label><br>
+                <!-- Add more fries flavors here -->
+            </div>
+            <div class="form-group">
+                <label for="fries-quantity">Fries Quantity:</label>
+                <input type="number" id="fries-quantity" name="fries-quantity" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="drinks">Drinks:</label>
+                <input type="text" id="drinks" name="drinks" required>
+            </div>
+            <div class="form-group">
+                <label for="drinks-size">Drinks Size:</label>
+                <select id="drinks-size" name="drinks-size">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="drinks-quantity">Drinks Quantity</label>
+                <input type="number" id="drinks-quantity" name="drinks-quantity" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="feedback">Feedback on how to improve the ordering form:</label>
+                <textarea id="feedback" name="feedback" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="delivery">Delivery or Pick-up:</label><br>
+                <input type="radio" id="delivery" name="delivery" value="delivery" required>
+                <label for="delivery">Delivery</label><br>
+                <input type="radio" id="pickup" name="delivery" value="pickup">
+                <label for="pickup">Pick-up</label><br>
+            </div>
+            <div class="submit-button">
+                <button type="submit">Submit Form</button>
+                <button type="reset">Clear Form</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
